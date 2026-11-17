@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/yfChang-cv/MAVE/docs/media_index.schema.json",
+  "title": "MAVE media_index",
+  "type": "object",
+  "required": ["version", "film_repo", "items"],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Schema version of this index file."
+    },
+    "film_repo": {
+      "type": "string",
+      "description": "Hugging Face dataset repo id for gated film media, e.g. yfChang-cv/MAVE-film."
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "subset", "film_path", "sha256"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Stable shot or clip id."
+          },
+          "subset": {
+            "type": "string",
+            "enum": ["mavebench", "mavedata3k"]
+          },
+          "film_path": {
+            "type": "string",
+            "description": "Path inside the gated film repo."
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{64}$"
+          },
+          "num_keyframes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -10,7 +10,9 @@
 
 | Content | Access |
 | --- | --- |
-| Our annotations & evaluation scripts | **Public** (coming soon) |
-| Film source media | **Hugging Face gated dataset** — request access (link coming soon) |
+| Our annotations & evaluation scripts | **Public** — [`yfChang/MAVE`](https://huggingface.co/datasets/yfChang/MAVE) |
+| Film source media | **Gated** — [`yfChang/MAVE-film`](https://huggingface.co/datasets/yfChang/MAVE-film) (request access) |
+
+Collection: [MAVE](https://huggingface.co/collections/yfChang/mave-6afc28d150cd379e072c4d9e)
 
 Film shots remain copyrighted by their original rights holders. We do not relicense the source media; access is granted for research use after approval.

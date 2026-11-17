@@ -11,7 +11,9 @@ Each pair includes:
 
 | Content | Access |
 | --- | --- |
-| Our annotations / derived metadata | **Public** (coming soon) |
-| Film-related media | **Hugging Face gated dataset** — request access (link coming soon) |
+| Our annotations / derived metadata | **Public** — [`yfChang/MAVE`](https://huggingface.co/datasets/yfChang/MAVE) |
+| Film-related media | **Gated** — [`yfChang/MAVE-film`](https://huggingface.co/datasets/yfChang/MAVE-film) (request access) |
+
+Collection: [MAVE](https://huggingface.co/collections/yfChang/mave-6afc28d150cd379e072c4d9e)
 
 Film materials remain copyrighted by their original rights holders and are distributed only through gated access for approved research use.

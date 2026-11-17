@@ -41,10 +41,12 @@ from Film Shots
 | Content | Access |
 | --- | --- |
 | **Code** | Public (this repository) |
-| **Our annotations** | Public |
-| **Film source media** (MAVEBench / MAVEData-3K) | **Hugging Face gated dataset** — request access |
+| **Our annotations** | Public: [`yfChang/MAVE`](https://huggingface.co/datasets/yfChang/MAVE) |
+| **Film source media** (MAVEBench / MAVEData-3K) | Gated: [`yfChang/MAVE-film`](https://huggingface.co/datasets/yfChang/MAVE-film) — request access |
 
-Film shots remain copyrighted by their original rights holders. We release our own annotations publicly; film media is distributed only through a gated Hugging Face dataset after an access request is approved for research use.
+HF gating is repo-wide, so we publish **two datasets in one Collection**: [MAVE](https://huggingface.co/collections/yfChang/mave-6afc28d150cd379e072c4d9e). Annotations stay publicly downloadable; film media requires manual approval. Details: [`docs/huggingface_release.md`](./docs/huggingface_release.md).
+
+Film shots remain copyrighted by their original rights holders. We release our own annotations publicly; film media is distributed only after gated access is approved for research use. Data files will be uploaded when ready.
 
 ## 📖 Abstract
 
@@ -83,13 +85,13 @@ MAVEBench evaluates video-to-blockout reconstruction along three axes:
 - **Spatial layout** — ordinal depth accuracy  
 - **Character blocking** — HOTA, Mask IoU  
 
-**Access.** Our annotations and evaluation scripts will be public in [`benchmark/`](./benchmark). Film source media will be available via a **Hugging Face gated dataset** (request access). HF link coming soon.
+**Access.** Our annotations and evaluation scripts will be public ([`benchmark/`](./benchmark) + [`yfChang/MAVE`](https://huggingface.co/datasets/yfChang/MAVE)). Film source media: request access at [`yfChang/MAVE-film`](https://huggingface.co/datasets/yfChang/MAVE-film).
 
 ## 📦 MAVEData-3K (Coming Soon)
 
 MAVEData-3K contains **3,000** blockout–video pairs. Each reconstructed scene is rendered with the recovered camera trajectory to produce a frame-aligned blockout video for training blockout-conditioned generation models.
 
-**Access.** Our annotations / derived metadata will be public. Film-related media will be released through a **Hugging Face gated dataset** (request access). HF link coming soon. See [`dataset/`](./dataset).
+**Access.** Our annotations / derived metadata: [`yfChang/MAVE`](https://huggingface.co/datasets/yfChang/MAVE). Film-related media: gated [`yfChang/MAVE-film`](https://huggingface.co/datasets/yfChang/MAVE-film). See [`dataset/`](./dataset).
 
 ## 📁 Repository Structure
 

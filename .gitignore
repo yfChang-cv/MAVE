@@ -18,3 +18,11 @@ checkpoints/
 .env
 .venv/
 data/
+
+# secrets (never upload)
+.hf_token
+*_token
+*_token.txt
+secrets/
+.huggingface/
+*.pem
