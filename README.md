@@ -1,6 +1,9 @@
 <div align="center">
 
-# MAVE: Reconstructing Editable 3D Blockouts from Film Shots
+<h1>
+MAVE: Reconstructing Editable 3D Blockouts<br>
+from Film Shots
+</h1>
 
 <img src="assets/mave.png" width="420"/>
 
