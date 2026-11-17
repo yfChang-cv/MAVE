@@ -10,8 +10,8 @@ from Film Shots
 [![Paper](https://img.shields.io/badge/Paper-Coming%20Soon-lightgrey.svg)](#)
 [![Project](https://img.shields.io/badge/Project-Page-Coming%20Soon-lightgrey.svg)](#)
 [![Code](https://img.shields.io/badge/Code-Coming%20Soon-lightgrey.svg)](./code)
-[![Benchmark](https://img.shields.io/badge/MAVEBench-Coming%20Soon-lightgrey.svg)](./benchmark)
-[![Dataset](https://img.shields.io/badge/MAVEData--3K-Coming%20Soon-lightgrey.svg)](./dataset)
+[![MAVEBench & MAVEData-3K](https://img.shields.io/badge/MAVEBench%20%26%20MAVEData--3K-Hugging%20Face-yellow.svg)](https://huggingface.co/datasets/yfChang/MAVE)
+[![Film](https://img.shields.io/badge/Film%20Media-Gated-orange.svg)](https://huggingface.co/datasets/yfChang/MAVE-film)
 
 **Yifan Chang<sup>1,2,5\*</sup>, Jian Yang<sup>1,3\*</sup>, Jiangnan Shao<sup>1,4\*</sup>, Xiaofeng Wang<sup>6</sup>,**<br>
 **Zhaoxin Fan<sup>7</sup>, Renjing Xu<sup>4</sup>, Ming Lu<sup>8</sup>, Xingang Wang<sup>2</sup>, Zheng Zhu<sup>1</sup>**
