@@ -1,0 +1,20 @@
+# paper (do not upload)
+*.pdf
+MAVE__cvpr27_main_arxiv.pdf
+papers/
+arxiv/
+
+# local / generated
+__pycache__/
+*.pyc
+.DS_Store
+.idea/
+.vscode/
+*.blend1
+*.log
+wandb/
+outputs/
+checkpoints/
+.env
+.venv/
+data/
