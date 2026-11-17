@@ -31,9 +31,20 @@ from Film Shots
 
 - [ ] Paper (arXiv / PDF)
 - [ ] Project page
-- [ ] Code of MAVE
-- [ ] MAVEBench (benchmark & evaluation)
-- [ ] MAVEData-3K (3,000 blockout–video pairs)
+- [ ] Code of MAVE (**public**)
+- [ ] Our annotations (**public**)
+- [ ] MAVEBench evaluation & film media (**Hugging Face gated**, upon request)
+- [ ] MAVEData-3K film media (**Hugging Face gated**, upon request)
+
+## 🔓 Access Policy
+
+| Content | Access |
+| --- | --- |
+| **Code** | Public (this repository) |
+| **Our annotations** | Public |
+| **Film source media** (MAVEBench / MAVEData-3K) | **Hugging Face gated dataset** — request access |
+
+Film shots remain copyrighted by their original rights holders. We release our own annotations publicly; film media is distributed only through a gated Hugging Face dataset after an access request is approved for research use.
 
 ## 📖 Abstract
 
@@ -41,12 +52,12 @@ Animated 3D blockouts support previsualization and provide structural conditions
 
 ## 🧩 Overview
 
-| Component | Description | Status |
+| Component | Description | Access |
 | --- | --- | --- |
-| [`code/`](./code) | MAVE pipeline: Metric Observation → Agentic Modeling → Evidence-Based Verification | Coming soon |
-| [`benchmark/`](./benchmark) | **MAVEBench**: 50 film shots, 416 keyframes, annotations & evaluation protocol | Coming soon |
-| [`dataset/`](./dataset) | **MAVEData-3K**: 3,000 paired blockout videos for training | Coming soon |
-| [`assets/`](./assets) | Figures and demo materials | Partial |
+| [`code/`](./code) | MAVE pipeline: Metric Observation → Agentic Modeling → Evidence-Based Verification | Public (coming soon) |
+| [`benchmark/`](./benchmark) | **MAVEBench** annotations & evaluation; film media via HF gated | Annotations public · media gated |
+| [`dataset/`](./dataset) | **MAVEData-3K** pairs; film media via HF gated | Annotations public · media gated |
+| [`assets/`](./assets) | Figures and demo materials | Public |
 
 ## 🛠️ Method
 
@@ -72,11 +83,13 @@ MAVEBench evaluates video-to-blockout reconstruction along three axes:
 - **Spatial layout** — ordinal depth accuracy  
 - **Character blocking** — HOTA, Mask IoU  
 
-Evaluation scripts and submission format for reconstructed `.blend` scenes will be released in [`benchmark/`](./benchmark).
+**Access.** Our annotations and evaluation scripts will be public in [`benchmark/`](./benchmark). Film source media will be available via a **Hugging Face gated dataset** (request access). HF link coming soon.
 
 ## 📦 MAVEData-3K (Coming Soon)
 
-MAVEData-3K contains **3,000** blockout–video pairs. Each reconstructed scene is rendered with the recovered camera trajectory to produce a frame-aligned blockout video for training blockout-conditioned generation models. Download links and format docs will appear in [`dataset/`](./dataset).
+MAVEData-3K contains **3,000** blockout–video pairs. Each reconstructed scene is rendered with the recovered camera trajectory to produce a frame-aligned blockout video for training blockout-conditioned generation models.
+
+**Access.** Our annotations / derived metadata will be public. Film-related media will be released through a **Hugging Face gated dataset** (request access). HF link coming soon. See [`dataset/`](./dataset).
 
 ## 📁 Repository Structure
 
@@ -99,4 +112,6 @@ For questions about MAVE, MAVEBench, or MAVEData-3K, please open an [issue](http
 
 ## 📄 License
 
-Code and data licenses will be announced with the public release.
+- **Code** — will be released under an open-source license (to be announced).  
+- **Our annotations** — public for research use (license to be announced).  
+- **Film source media** — copyright remains with the original rights holders; distributed only via Hugging Face gated access for approved research use.
