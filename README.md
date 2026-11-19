@@ -79,94 +79,31 @@ Detailed installation and inference instructions will be added with the code rel
 
 ## 🎬 Qualitative Comparison
 
-Click a preview to open the MP4 (GitHub’s built-in player). Interactive tabs: [project page](https://yfChang-cv.github.io/MAVE/#comparison) (coming soon).
-
-
+Interactive tabs: [project page](https://yfChang-cv.github.io/MAVE/#comparison) (coming soon).
 
 https://github.com/user-attachments/assets/33080d7e-4381-41d3-8f63-ae4c125d7bb0
 
-
-
 https://github.com/user-attachments/assets/c783ee84-57ff-4f5c-af7a-f74281cbd3fe
-
-
 
 https://github.com/user-attachments/assets/98a1c71e-5b8c-4480-b909-dc1c907541f7
 
-
-
-
-<p align="center">
-  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/compare_method/mosaic/R238_compare3x3.mp4">
-    <img src="assets/compare_method/mosaic/R238_compare3x3.jpg" width="100%" alt="Comparison mosaic R238"/>
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/compare_method/mosaic/F031_compare3x3.mp4">
-    <img src="assets/compare_method/mosaic/F031_compare3x3.jpg" width="100%" alt="Comparison mosaic F031"/>
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/compare_method/mosaic/F076_compare3x3.mp4">
-    <img src="assets/compare_method/mosaic/F076_compare3x3.jpg" width="100%" alt="Comparison mosaic F076"/>
-  </a>
-</p>
-
 ## 🎯 Applications
 
+<p align="center"><b>Change character trajectory</b></p>
 
 https://github.com/user-attachments/assets/973d696d-79da-4de0-b8d6-7ff763e56e5a
 
-
-
-https://github.com/user-attachments/assets/2b853f7d-6ec7-4dec-98eb-6b771e6a222f
-
-
+<p align="center"><b>Change camera trajectory</b></p>
 
 https://github.com/user-attachments/assets/39587728-714c-45c8-a409-6ff415d21da7
 
-
-
-https://github.com/user-attachments/assets/5d3d4410-e648-46ea-9d7d-0dc80cd16287
-
-
+<p align="center"><b>Person exo→ego</b></p>
 
 https://github.com/user-attachments/assets/9c5567d4-7f53-4ad0-974d-4b0aec56a394
 
-
+<p align="center"><b>Robot exo→ego</b></p>
 
 https://github.com/user-attachments/assets/e3d26414-454e-4ec9-9088-298b932783af
-
-
-<p align="center"><b>Change character trajectory</b> · <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/01_change_trajectory/r195-jump-bench-left/r195-jump-bench-left_mosaic.mp4">▶ video</a></p>
-<p align="center">
-  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/01_change_trajectory/r195-jump-bench-left/r195-jump-bench-left_mosaic.mp4">
-    <img src="assets/application/01_change_trajectory/r195-jump-bench-left/r195-jump-bench-left_mosaic.jpg" width="100%" alt="Change character trajectory"/>
-  </a>
-</p>
-
-<p align="center"><b>Change camera trajectory</b> · <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/02_change_camera/1-orbit-loop/1-orbit-loop_mosaic.mp4">▶ video</a></p>
-<p align="center">
-  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/02_change_camera/1-orbit-loop/1-orbit-loop_mosaic.mp4">
-    <img src="assets/application/02_change_camera/1-orbit-loop/1-orbit-loop_mosaic.jpg" width="100%" alt="Change camera trajectory"/>
-  </a>
-</p>
-
-<p align="center"><b>Person exo→ego</b> · <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/03_person_exo2ego/r116-openai-ego-full/r116-openai-ego-full_mosaic.mp4">▶ video</a></p>
-<p align="center">
-  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/03_person_exo2ego/r116-openai-ego-full/r116-openai-ego-full_mosaic.mp4">
-    <img src="assets/application/03_person_exo2ego/r116-openai-ego-full/r116-openai-ego-full_mosaic.jpg" width="100%" alt="Person exo to ego"/>
-  </a>
-</p>
-
-<p align="center"><b>Robot exo→ego</b> · <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/04_robot_exo2ego/robot-cleanup-ego-v1/robot-cleanup-ego-v1_mosaic.mp4">▶ video</a></p>
-<p align="center">
-  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/04_robot_exo2ego/robot-cleanup-ego-v1/robot-cleanup-ego-v1_mosaic.mp4">
-    <img src="assets/application/04_robot_exo2ego/robot-cleanup-ego-v1/robot-cleanup-ego-v1_mosaic.jpg" width="100%" alt="Robot exo to ego"/>
-  </a>
-</p>
 
 ## 📊 MAVEBench
 
