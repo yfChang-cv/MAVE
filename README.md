@@ -107,7 +107,7 @@ https://github.com/user-attachments/assets/a2034fb5-f14f-499a-8f77-ee345c28d725
 
 ## 📊 MAVEBench
 
-MAVEBench evaluates video-to-blockout reconstruction on **50 film shots** along three axes: camera motion, spatial layout, and character blocking. Total is the mean of the three axis scores (0–100). **Best** / <u>second-best</u> among reconstruction methods are highlighted. All MAVE runs share cameras from Metric Observation.
+MAVEBench evaluates video-to-blockout reconstruction on **50 film shots** along three axes: camera motion, spatial layout, and character blocking. Total is the mean of the three axis scores (0–100). **Best** / <ins>second-best</ins> among reconstruction methods are highlighted. All MAVE runs share cameras from Metric Observation.
 
 <p align="center"><b>Reconstruction quality</b></p>
 
@@ -117,15 +117,15 @@ MAVEBench evaluates video-to-blockout reconstruction on **50 film shots** along 
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | No Reconstruction | 0.168 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.0 |
 | *Vanilla* | | | | | | | | | |
-| GPT-6.1 Sol | <u>0.060</u> | <u>0.571</u> | 0.215 | <u>0.477</u> | 0.609 | 0.421 | 0.324 | 0.373 | 48.6 |
-| Claude Opus 5.5 | 0.077 | 0.542 | <u>0.247</u> | 0.444 | 0.585 | 0.264 | 0.175 | 0.220 | 41.6 |
+| GPT-6.1 Sol | <ins>0.060</ins> | <ins>0.571</ins> | 0.215 | <ins>0.477</ins> | 0.609 | 0.421 | 0.324 | 0.373 | 48.6 |
+| Claude Opus 5.5 | 0.077 | 0.542 | <ins>0.247</ins> | 0.444 | 0.585 | 0.264 | 0.175 | 0.220 | 41.6 |
 | DeepSeek-1017 | 0.123 | 0.430 | 0.184 | 0.293 | 0.596 | 0.260 | 0.191 | 0.226 | 37.2 |
 | Claude Sonnet 5.5 | 0.135 | 0.346 | 0.209 | 0.250 | 0.534 | 0.195 | 0.131 | 0.163 | 31.6 |
 | Kimi K3.1 Pro | 0.156 | 0.208 | 0.185 | 0.155 | 0.511 | 0.215 | 0.152 | 0.183 | 28.3 |
 | **MAVE (Ours)** | | | | | | | | | |
 | GPT-6.1 Sol | **0.005** | **1.000** | **0.844** | **0.938** | **0.781** | **0.627** | **0.499** | **0.563** | **76.1** |
-| DeepSeek-1017 | **0.005** | **1.000** | **0.844** | **0.938** | <u>0.717</u> | 0.604 | 0.478 | 0.541 | <u>73.2</u> |
-| Claude Sonnet 5.5 | **0.005** | **1.000** | **0.844** | **0.938** | 0.695 | <u>0.612</u> | <u>0.485</u> | <u>0.548</u> | 72.7 |
+| DeepSeek-1017 | **0.005** | **1.000** | **0.844** | **0.938** | <ins>0.717</ins> | 0.604 | 0.478 | 0.541 | <ins>73.2</ins> |
+| Claude Sonnet 5.5 | **0.005** | **1.000** | **0.844** | **0.938** | 0.695 | <ins>0.612</ins> | <ins>0.485</ins> | <ins>0.548</ins> | 72.7 |
 
 </div>
 
@@ -138,13 +138,13 @@ MAVEBench evaluates video-to-blockout reconstruction on **50 film shots** along 
 | *Vanilla* | | | | |
 | GPT-6.1 Sol | 22m41s | 273.1 | $0.385 | 48.6 |
 | Claude Opus 5.5 | 15m50s | 36.4 | $0.644 | 41.6 |
-| DeepSeek-1017 | 20m25s | 182.3 | <u>$0.074</u> | 37.2 |
+| DeepSeek-1017 | 20m25s | 182.3 | <ins>$0.074</ins> | 37.2 |
 | Claude Sonnet 5.5 | **3m46s** | 67.7 | $0.341 | 31.6 |
 | Kimi K3.1 Pro | 24m53s | 271.2 | $0.368 | 28.3 |
 | **MAVE (Ours)** | | | | |
 | GPT-6.1 Sol | 13m11s | 115.5 | $0.445 | **76.1** |
-| DeepSeek-1017 | 9m17s | 68.3 | **$0.054** | <u>73.2</u> |
-| Claude Sonnet 5.5 | <u>4m36s</u> | 20.9 | $0.363 | 72.7 |
+| DeepSeek-1017 | 9m17s | 68.3 | **$0.054** | <ins>73.2</ins> |
+| Claude Sonnet 5.5 | <ins>4m36s</ins> | 20.9 | $0.363 | 72.7 |
 
 </div>
 
