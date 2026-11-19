@@ -101,31 +101,31 @@ Click a preview to open the MP4 (GitHub’s built-in player). Interactive tabs: 
 
 ## 🎯 Applications
 
-<p align="center"><b>Change character trajectory</b> · <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/01_change_trajectory/r195-jump-bench-left/mosaic_2x2.mp4">▶ video</a></p>
+<p align="center"><b>Change character trajectory</b> · <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/01_change_trajectory/r195-jump-bench-left/r195-jump-bench-left_mosaic.mp4">▶ video</a></p>
 <p align="center">
-  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/01_change_trajectory/r195-jump-bench-left/mosaic_2x2.mp4">
-    <img src="assets/application/01_change_trajectory/r195-jump-bench-left/mosaic_2x2.jpg" width="100%" alt="Change character trajectory"/>
+  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/01_change_trajectory/r195-jump-bench-left/r195-jump-bench-left_mosaic.mp4">
+    <img src="assets/application/01_change_trajectory/r195-jump-bench-left/r195-jump-bench-left_mosaic.jpg" width="100%" alt="Change character trajectory"/>
   </a>
 </p>
 
-<p align="center"><b>Change camera trajectory</b> · <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/02_change_camera/1-orbit-loop/mosaic_2x2.mp4">▶ video</a></p>
+<p align="center"><b>Change camera trajectory</b> · <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/02_change_camera/1-orbit-loop/1-orbit-loop_mosaic.mp4">▶ video</a></p>
 <p align="center">
-  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/02_change_camera/1-orbit-loop/mosaic_2x2.mp4">
-    <img src="assets/application/02_change_camera/1-orbit-loop/mosaic_2x2.jpg" width="100%" alt="Change camera trajectory"/>
+  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/02_change_camera/1-orbit-loop/1-orbit-loop_mosaic.mp4">
+    <img src="assets/application/02_change_camera/1-orbit-loop/1-orbit-loop_mosaic.jpg" width="100%" alt="Change camera trajectory"/>
   </a>
 </p>
 
-<p align="center"><b>Person exo→ego</b> · <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/03_person_exo2ego/r116-openai-ego-full/mosaic_2x2.mp4">▶ video</a></p>
+<p align="center"><b>Person exo→ego</b> · <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/03_person_exo2ego/r116-openai-ego-full/r116-openai-ego-full_mosaic.mp4">▶ video</a></p>
 <p align="center">
-  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/03_person_exo2ego/r116-openai-ego-full/mosaic_2x2.mp4">
-    <img src="assets/application/03_person_exo2ego/r116-openai-ego-full/mosaic_2x2.jpg" width="100%" alt="Person exo to ego"/>
+  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/03_person_exo2ego/r116-openai-ego-full/r116-openai-ego-full_mosaic.mp4">
+    <img src="assets/application/03_person_exo2ego/r116-openai-ego-full/r116-openai-ego-full_mosaic.jpg" width="100%" alt="Person exo to ego"/>
   </a>
 </p>
 
-<p align="center"><b>Robot exo→ego</b> · <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/04_robot_exo2ego/robot-cleanup-ego-v1/mosaic_2x2.mp4">▶ video</a></p>
+<p align="center"><b>Robot exo→ego</b> · <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/04_robot_exo2ego/robot-cleanup-ego-v1/robot-cleanup-ego-v1_mosaic.mp4">▶ video</a></p>
 <p align="center">
-  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/04_robot_exo2ego/robot-cleanup-ego-v1/mosaic_2x2.mp4">
-    <img src="assets/application/04_robot_exo2ego/robot-cleanup-ego-v1/mosaic_2x2.jpg" width="100%" alt="Robot exo to ego"/>
+  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/04_robot_exo2ego/robot-cleanup-ego-v1/robot-cleanup-ego-v1_mosaic.mp4">
+    <img src="assets/application/04_robot_exo2ego/robot-cleanup-ego-v1/robot-cleanup-ego-v1_mosaic.jpg" width="100%" alt="Robot exo to ego"/>
   </a>
 </p>
 
