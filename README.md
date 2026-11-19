@@ -81,6 +81,10 @@ Detailed installation and inference instructions will be added with the code rel
 
 Click a preview to open the MP4 (GitHub’s built-in player). Interactive tabs: [project page](https://yfChang-cv.github.io/MAVE/#comparison) (coming soon).
 
+
+https://github.com/user-attachments/assets/31888af6-c6a7-4b15-b681-9c95a54f0839
+
+
 <p align="center">
   <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/compare_method/mosaic/R238_compare3x3.mp4">
     <img src="assets/compare_method/mosaic/R238_compare3x3.jpg" width="100%" alt="Comparison mosaic R238"/>
@@ -100,6 +104,30 @@ Click a preview to open the MP4 (GitHub’s built-in player). Interactive tabs: 
 </p>
 
 ## 🎯 Applications
+
+
+https://github.com/user-attachments/assets/973d696d-79da-4de0-b8d6-7ff763e56e5a
+
+
+
+https://github.com/user-attachments/assets/2b853f7d-6ec7-4dec-98eb-6b771e6a222f
+
+
+
+https://github.com/user-attachments/assets/39587728-714c-45c8-a409-6ff415d21da7
+
+
+
+https://github.com/user-attachments/assets/5d3d4410-e648-46ea-9d7d-0dc80cd16287
+
+
+
+https://github.com/user-attachments/assets/9c5567d4-7f53-4ad0-974d-4b0aec56a394
+
+
+
+https://github.com/user-attachments/assets/e3d26414-454e-4ec9-9088-298b932783af
+
 
 <p align="center"><b>Change character trajectory</b> · <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/01_change_trajectory/r195-jump-bench-left/r195-jump-bench-left_mosaic.mp4">▶ video</a></p>
 <p align="center">
