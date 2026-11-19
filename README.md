@@ -82,7 +82,18 @@ Detailed installation and inference instructions will be added with the code rel
 Click a preview to open the MP4 (GitHub’s built-in player). Interactive tabs: [project page](https://yfChang-cv.github.io/MAVE/#comparison) (coming soon).
 
 
-https://github.com/user-attachments/assets/31888af6-c6a7-4b15-b681-9c95a54f0839
+
+https://github.com/user-attachments/assets/33080d7e-4381-41d3-8f63-ae4c125d7bb0
+
+
+
+https://github.com/user-attachments/assets/c783ee84-57ff-4f5c-af7a-f74281cbd3fe
+
+
+
+https://github.com/user-attachments/assets/98a1c71e-5b8c-4480-b909-dc1c907541f7
+
+
 
 
 <p align="center">
