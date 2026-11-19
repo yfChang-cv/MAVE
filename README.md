@@ -7,9 +7,8 @@ from Film Shots
 
 <img src="assets/mave.png" width="420"/>
 
-[![Paper](https://img.shields.io/badge/Paper-Coming%20Soon-lightgrey.svg)](#)
-[![Project](https://img.shields.io/badge/Project-Page-Coming%20Soon-lightgrey.svg)](#)
-[![Code](https://img.shields.io/badge/Code-Coming%20Soon-lightgrey.svg)](./code)
+[![Paper](https://img.shields.io/badge/arXiv-2611.22464-b31b1b.svg)](https://arxiv.org/abs/2611.22464)
+[![Project](https://img.shields.io/badge/Project-Page-blue.svg)](https://yfChang-cv.github.io/MAVE/)
 [![MAVEBench & MAVEData-3K](https://img.shields.io/badge/MAVEBench%20%26%20MAVEData--3K-Hugging%20Face-yellow.svg)](https://huggingface.co/datasets/yfChang/MAVE)
 [![Film](https://img.shields.io/badge/Film%20Media-Gated-orange.svg)](https://huggingface.co/datasets/yfChang/MAVE-film)
 
@@ -25,12 +24,13 @@ from Film Shots
 
 ## 🔥 News
 
+- **[2026.11]** Paper is available on [arXiv](https://arxiv.org/abs/2611.22464).
 - **[2026.11]** Repository is online. Code, MAVEBench, and MAVEData-3K will be released soon.
 
 ## 📌 Release Status
 
-- [ ] Paper (arXiv / PDF)
-- [ ] Project page
+- ✅ ~~Paper ([arXiv](https://arxiv.org/abs/2611.22464))~~
+- [ ] Project page ([GitHub Pages](https://yfChang-cv.github.io/MAVE/))
 - [ ] Code of MAVE (**public**)
 - [ ] Our annotations (**public**)
 - [ ] MAVEBench evaluation & film media (**Hugging Face gated**, upon request)
@@ -50,7 +50,7 @@ Film shots remain copyrighted by their original rights holders. We release our o
 
 ## 📖 Abstract
 
-Animated 3D blockouts support previsualization and provide structural conditions for video generation, but manually reconstructing them from reference videos is costly. We introduce **MAVEBench**, a benchmark of 50 film shots and 416 keyframes for evaluating camera motion, spatial layout, and character blocking. We propose **MAVE**, a video-to-blockout framework combining **M**etric observation, **A**gentic modeling, and evidence-based **VE**rification. It recovers cameras, human motion, and geometric evidence in a shared metric coordinate system, then constructs an editable environment under observation constraints with programmatic checks for refinement. The outputs are editable Blender scenes and frame-aligned blockout videos. On MAVEBench, MAVE improves overall scores by **27.5–41.1** points across three agents over vanilla baselines. With DeepSeek-1017, it achieves a score of **73.2** at only **$0.054** average API cost per shot, while reducing total reconstruction time by **53%**. We also construct **MAVEData-3K**, a dataset of 3,000 blockout–video pairs for public release.
+Animated 3D blockouts support previsualization and provide structural conditions for video generation, but manually reconstructing them from reference videos is costly. We introduce **MAVEBench**, a benchmark of 50 film shots and 416 keyframes for evaluating camera motion, spatial layout, and character blocking. We propose **MAVE**, a video-to-blockout framework combining **M**etric observation, **A**gentic modeling, and evidence-based **VE**rification. It recovers cameras, human motion, and geometric evidence in a shared metric coordinate system, then constructs an editable environment under observation constraints with programmatic checks for refinement. The outputs are editable Blender scenes and frame-aligned blockout videos. On MAVEBench, MAVE improves overall scores by **27.5–41.1** points across three agents over vanilla baselines. With DeepSeek-1017, it achieves a score of **73.2** at only **$0.054** average API cost per shot, while reducing total reconstruction time by **53%**. We also construct **MAVEData-3K**, a dataset of 3,000 blockout–video pairs for public release. Creators can change viewpoints and character paths, then render the edited scenes to condition video generation.
 
 ## 🧩 Overview
 
@@ -77,13 +77,86 @@ MAVE reconstructs editable blockouts in three stages:
 
 Detailed installation and inference instructions will be added with the code release.
 
-## 📊 MAVEBench (Coming Soon)
+## 🎬 Qualitative Comparison
 
-MAVEBench evaluates video-to-blockout reconstruction along three axes:
+Interactive tabs + Play: [project page](https://yfChang-cv.github.io/MAVE/#comparison).
 
-- **Camera motion** — ORE, RRA@15, RTA@15  
-- **Spatial layout** — ordinal depth accuracy  
-- **Character blocking** — HOTA, Mask IoU  
+<p align="center">
+  <video src="assets/compare_method/mosaic/R238_compare3x3.mp4" width="100%" controls muted loop playsinline></video>
+</p>
+
+<p align="center">
+  <video src="assets/compare_method/mosaic/F031_compare3x3.mp4" width="100%" controls muted loop playsinline></video>
+</p>
+
+<p align="center">
+  <video src="assets/compare_method/mosaic/F076_compare3x3.mp4" width="100%" controls muted loop playsinline></video>
+</p>
+
+## 🎯 Applications
+
+<p align="center"><b>Change character trajectory</b></p>
+<p align="center">
+  <video src="assets/application/01_change_trajectory/r195-jump-bench-left/mosaic_2x2.mp4" width="100%" controls muted loop playsinline></video>
+</p>
+
+<p align="center"><b>Change camera trajectory</b></p>
+<p align="center">
+  <video src="assets/application/02_change_camera/1-orbit-loop/mosaic_2x2.mp4" width="100%" controls muted loop playsinline></video>
+</p>
+
+<p align="center"><b>Person exo→ego</b></p>
+<p align="center">
+  <video src="assets/application/03_person_exo2ego/r116-openai-ego-full/mosaic_2x2.mp4" width="100%" controls muted loop playsinline></video>
+</p>
+
+<p align="center"><b>Robot exo→ego</b></p>
+<p align="center">
+  <video src="assets/application/04_robot_exo2ego/robot-cleanup-ego-v1/mosaic_2x2.mp4" width="100%" controls muted loop playsinline></video>
+</p>
+
+## 📊 MAVEBench
+
+MAVEBench evaluates video-to-blockout reconstruction on **50 film shots** along three axes: camera motion, spatial layout, and character blocking. Total is the mean of the three axis scores (0–100). **Best** / <u>second-best</u> among reconstruction methods are highlighted. All MAVE runs share cameras from Metric Observation.
+
+<p align="center"><b>Reconstruction quality</b></p>
+
+<div align="center">
+
+| Method | ORE↓ | RRA@15↑ | RTA@15↑ | Cam.↑ | OrdAcc↑ | HOTA↑ | MaskIoU↑ | Char.↑ | Total↑ |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| No Reconstruction | 0.168 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.0 |
+| *Vanilla* | | | | | | | | | |
+| GPT-6.1 Sol | <u>0.060</u> | <u>0.571</u> | 0.215 | <u>0.477</u> | 0.609 | 0.421 | 0.324 | 0.373 | 48.6 |
+| Claude Opus 5.5 | 0.077 | 0.542 | <u>0.247</u> | 0.444 | 0.585 | 0.264 | 0.175 | 0.220 | 41.6 |
+| DeepSeek-1017 | 0.123 | 0.430 | 0.184 | 0.293 | 0.596 | 0.260 | 0.191 | 0.226 | 37.2 |
+| Claude Sonnet 5.5 | 0.135 | 0.346 | 0.209 | 0.250 | 0.534 | 0.195 | 0.131 | 0.163 | 31.6 |
+| Kimi K3.1 Pro | 0.156 | 0.208 | 0.185 | 0.155 | 0.511 | 0.215 | 0.152 | 0.183 | 28.3 |
+| **MAVE (Ours)** | | | | | | | | | |
+| GPT-6.1 Sol | **0.005** | **1.000** | **0.844** | **0.938** | **0.781** | **0.627** | **0.499** | **0.563** | **76.1** |
+| DeepSeek-1017 | **0.005** | **1.000** | **0.844** | **0.938** | <u>0.717</u> | 0.604 | 0.478 | 0.541 | <u>73.2</u> |
+| Claude Sonnet 5.5 | **0.005** | **1.000** | **0.844** | **0.938** | 0.695 | <u>0.612</u> | <u>0.485</u> | <u>0.548</u> | 72.7 |
+
+</div>
+
+<p align="center"><b>Reconstruction efficiency</b> &nbsp;·&nbsp; <i>+ Metric Observation: 1m28s</i></p>
+
+<div align="center">
+
+| Method | Agent Time↓ | # Primitives | Cost↓ | Total↑ |
+| :--- | :---: | :---: | :---: | :---: |
+| *Vanilla* | | | | |
+| GPT-6.1 Sol | 22m41s | 273.1 | $0.385 | 48.6 |
+| Claude Opus 5.5 | 15m50s | 36.4 | $0.644 | 41.6 |
+| DeepSeek-1017 | 20m25s | 182.3 | <u>$0.074</u> | 37.2 |
+| Claude Sonnet 5.5 | **3m46s** | 67.7 | $0.341 | 31.6 |
+| Kimi K3.1 Pro | 24m53s | 271.2 | $0.368 | 28.3 |
+| **MAVE (Ours)** | | | | |
+| GPT-6.1 Sol | 13m11s | 115.5 | $0.445 | **76.1** |
+| DeepSeek-1017 | 9m17s | 68.3 | **$0.054** | <u>73.2</u> |
+| Claude Sonnet 5.5 | <u>4m36s</u> | 20.9 | $0.363 | 72.7 |
+
+</div>
 
 **Access.** Our annotations and evaluation scripts will be public ([`benchmark/`](./benchmark) + [`yfChang/MAVE`](https://huggingface.co/datasets/yfChang/MAVE)). Film source media: request access at [`yfChang/MAVE-film`](https://huggingface.co/datasets/yfChang/MAVE-film).
 
@@ -106,7 +179,19 @@ MAVE/
 
 ## 📝 Citation
 
-Coming soon.
+If you find MAVE useful, please cite:
+
+```bibtex
+@misc{chang2026mavereconstructingeditable3d,
+      title={MAVE: Reconstructing Editable 3D Blockouts from Film Shots}, 
+      author={Yifan Chang and Jian Yang and Jiangnan Shao and Xiaofeng Wang and Zhaoxin Fan and Renjing Xu and Ming Lu and Xingang Wang and Zheng Zhu},
+      year={2026},
+      eprint={2611.22464},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2611.22464}, 
+}
+```
 
 ## 📮 Contact
 

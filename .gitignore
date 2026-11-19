@@ -11,6 +11,7 @@ __pycache__/
 .idea/
 .vscode/
 *.blend1
+*.bak
 *.log
 wandb/
 outputs/
@@ -26,3 +27,10 @@ data/
 secrets/
 .huggingface/
 *.pem
+
+# mosaic label temps (regenerated locally)
+assets/fonts/_label_tmp/
+assets/fonts/_label_tmp_*/
+
+# scripts (hold for now; re-enable when releasing tooling)
+scripts/
