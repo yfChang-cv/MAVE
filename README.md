@@ -79,40 +79,54 @@ Detailed installation and inference instructions will be added with the code rel
 
 ## 🎬 Qualitative Comparison
 
-Interactive tabs + Play: [project page](https://yfChang-cv.github.io/MAVE/#comparison).
+Click a preview to open the MP4 (GitHub’s built-in player). Interactive tabs: [project page](https://yfChang-cv.github.io/MAVE/#comparison) (coming soon).
 
 <p align="center">
-  <video src="assets/compare_method/mosaic/R238_compare3x3.mp4" width="100%" controls muted loop playsinline></video>
+  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/compare_method/mosaic/R238_compare3x3.mp4">
+    <img src="assets/compare_method/mosaic/R238_compare3x3.jpg" width="100%" alt="Comparison mosaic R238"/>
+  </a>
 </p>
 
 <p align="center">
-  <video src="assets/compare_method/mosaic/F031_compare3x3.mp4" width="100%" controls muted loop playsinline></video>
+  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/compare_method/mosaic/F031_compare3x3.mp4">
+    <img src="assets/compare_method/mosaic/F031_compare3x3.jpg" width="100%" alt="Comparison mosaic F031"/>
+  </a>
 </p>
 
 <p align="center">
-  <video src="assets/compare_method/mosaic/F076_compare3x3.mp4" width="100%" controls muted loop playsinline></video>
+  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/compare_method/mosaic/F076_compare3x3.mp4">
+    <img src="assets/compare_method/mosaic/F076_compare3x3.jpg" width="100%" alt="Comparison mosaic F076"/>
+  </a>
 </p>
 
 ## 🎯 Applications
 
-<p align="center"><b>Change character trajectory</b></p>
+<p align="center"><b>Change character trajectory</b> · <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/01_change_trajectory/r195-jump-bench-left/mosaic_2x2.mp4">▶ video</a></p>
 <p align="center">
-  <video src="assets/application/01_change_trajectory/r195-jump-bench-left/mosaic_2x2.mp4" width="100%" controls muted loop playsinline></video>
+  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/01_change_trajectory/r195-jump-bench-left/mosaic_2x2.mp4">
+    <img src="assets/application/01_change_trajectory/r195-jump-bench-left/mosaic_2x2.jpg" width="100%" alt="Change character trajectory"/>
+  </a>
 </p>
 
-<p align="center"><b>Change camera trajectory</b></p>
+<p align="center"><b>Change camera trajectory</b> · <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/02_change_camera/1-orbit-loop/mosaic_2x2.mp4">▶ video</a></p>
 <p align="center">
-  <video src="assets/application/02_change_camera/1-orbit-loop/mosaic_2x2.mp4" width="100%" controls muted loop playsinline></video>
+  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/02_change_camera/1-orbit-loop/mosaic_2x2.mp4">
+    <img src="assets/application/02_change_camera/1-orbit-loop/mosaic_2x2.jpg" width="100%" alt="Change camera trajectory"/>
+  </a>
 </p>
 
-<p align="center"><b>Person exo→ego</b></p>
+<p align="center"><b>Person exo→ego</b> · <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/03_person_exo2ego/r116-openai-ego-full/mosaic_2x2.mp4">▶ video</a></p>
 <p align="center">
-  <video src="assets/application/03_person_exo2ego/r116-openai-ego-full/mosaic_2x2.mp4" width="100%" controls muted loop playsinline></video>
+  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/03_person_exo2ego/r116-openai-ego-full/mosaic_2x2.mp4">
+    <img src="assets/application/03_person_exo2ego/r116-openai-ego-full/mosaic_2x2.jpg" width="100%" alt="Person exo to ego"/>
+  </a>
 </p>
 
-<p align="center"><b>Robot exo→ego</b></p>
+<p align="center"><b>Robot exo→ego</b> · <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/04_robot_exo2ego/robot-cleanup-ego-v1/mosaic_2x2.mp4">▶ video</a></p>
 <p align="center">
-  <video src="assets/application/04_robot_exo2ego/robot-cleanup-ego-v1/mosaic_2x2.mp4" width="100%" controls muted loop playsinline></video>
+  <a href="https://github.com/yfChang-cv/MAVE/blob/main/assets/application/04_robot_exo2ego/robot-cleanup-ego-v1/mosaic_2x2.mp4">
+    <img src="assets/application/04_robot_exo2ego/robot-cleanup-ego-v1/mosaic_2x2.jpg" width="100%" alt="Robot exo to ego"/>
+  </a>
 </p>
 
 ## 📊 MAVEBench
