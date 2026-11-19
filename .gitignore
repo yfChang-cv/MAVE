@@ -20,6 +20,17 @@ checkpoints/
 .venv/
 data/
 
+# benchmark / dataset data trees → Hugging Face only (not GitHub)
+# keep benchmark/README.md and .gitkeep tracked
+benchmark/mavebench/
+benchmark/film/
+dataset/mavedata-3k/
+dataset/film/
+
+# optional local previews next to eval examples (not required)
+code/eval/examples/**/whitemodel.mp4
+
+
 # secrets (never upload)
 .hf_token
 *_token

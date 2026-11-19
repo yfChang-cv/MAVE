@@ -33,7 +33,7 @@ MAVE/
 │   ├── splits/                  # shot list, keyframe index
 │   ├── eval/                    # protocol notes / submission format
 │   └── media_index.json         # maps shot_id → film repo paths + sha256
-└── mavedata3k/
+└── mavedata-3k/
     ├── annotations/             # pair metadata, trajectories, …
     ├── blockouts/               # optional public derivatives (if cleared)
     └── media_index.json
@@ -46,9 +46,9 @@ MAVE-film/
 ├── README.md                    # access terms + request instructions
 ├── NOTICE
 ├── mavebench/
-│   └── shots/<shot_id>/         # frames / clips only
-└── mavedata3k/
-    └── videos/<clip_id>/        # source videos only
+│   └── shots/<shot_id>/video.mp4   # MAVEBench source clips
+└── mavedata-3k/
+    └── …                           # MAVEData-3K source videos
 ```
 
 ## `media_index.json` (public repo)
@@ -60,14 +60,14 @@ Example entry:
 ```json
 {
   "version": 1,
-  "film_repo": "yfChang-cv/MAVE-film",
+  "film_repo": "yfChang/MAVE-film",
   "items": [
     {
-      "id": "shot_001",
+      "id": "F002",
       "subset": "mavebench",
-      "film_path": "mavebench/shots/shot_001/video.mp4",
+      "film_path": "mavebench/shots/F002/video.mp4",
       "sha256": "…",
-      "num_keyframes": 8
+      "num_keyframes": 10
     }
   ]
 }

@@ -6,11 +6,13 @@
 - 416 keyframes (~1.5 s interval, including endpoints)  
 - Metrics for camera motion, spatial layout, and character blocking  
 
+Data is hosted on Hugging Face (not in this GitHub tree). Evaluation code: [`code/`](../code/README.md).
+
 ## Access
 
 | Content | Access |
 | --- | --- |
-| Our annotations & evaluation scripts | **Public** — [`yfChang/MAVE`](https://huggingface.co/datasets/yfChang/MAVE) |
+| Our annotations | **Public** — [`yfChang/MAVE`](https://huggingface.co/datasets/yfChang/MAVE) |
 | Film source media | **Gated** — [`yfChang/MAVE-film`](https://huggingface.co/datasets/yfChang/MAVE-film) (request access) |
 
 Collection: [MAVE](https://huggingface.co/collections/yfChang/mave-6afc28d150cd379e072c4d9e)
