@@ -89,35 +89,21 @@ https://github.com/user-attachments/assets/98a1c71e-5b8c-4480-b909-dc1c907541f7
 
 ## 🎯 Applications
 
+<p align="center"><b>Change character trajectory</b></p>
 
 https://github.com/user-attachments/assets/084f06c4-2d42-4543-9770-9e6d944b68e8
 
-
+<p align="center"><b>Change camera trajectory</b></p>
 
 https://github.com/user-attachments/assets/249149d9-cac7-42a4-b8e1-cf46811b77f7
 
-
+<p align="center"><b>Person exo→ego</b></p>
 
 https://github.com/user-attachments/assets/0ddb2248-f198-42cd-8f66-3002ec2d8177
 
-
-
-https://github.com/user-attachments/assets/a2034fb5-f14f-499a-8f77-ee345c28d725
-
-
-
-
-<p align="center"><b>Change character trajectory</b></p>
-
-
-<p align="center"><b>Change camera trajectory</b></p>
-
-
-<p align="center"><b>Person exo→ego</b></p>
-
-
 <p align="center"><b>Robot exo→ego</b></p>
 
+https://github.com/user-attachments/assets/a2034fb5-f14f-499a-8f77-ee345c28d725
 
 ## 📊 MAVEBench
 
