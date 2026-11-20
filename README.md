@@ -30,7 +30,7 @@ from Film Shots
 ## 📌 Release Status
 
 - ✅ ~~Paper ([arXiv](https://arxiv.org/abs/2611.22464))~~
-- [ ] Project page ([GitHub Pages](https://yfChang-cv.github.io/MAVE/))
+- ✅ ~~Project page ([GitHub Pages](https://yfChang-cv.github.io/MAVE/))~~
 - [ ] Code of MAVE (**public**)
 - [ ] Our annotations (**public**)
 - [ ] MAVEBench evaluation & film media (**Hugging Face gated**, upon request)
