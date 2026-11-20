@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MAVE — Reconstructing Editable 3D Blockouts from Film Shots</title>
+  <meta name="description" content="MAVE reconstructs editable 3D blockouts from film shots via Metric Observation, Agentic Modeling, and Evidence-Based Verification." />
+  <meta property="og:title" content="MAVE: Reconstructing Editable 3D Blockouts from Film Shots" />
+  <meta property="og:image" content="static/img/promo_poster.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="static/css/style.css" />
+  <link rel="icon" href="static/img/mave_icon.png" />
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap wrap-wide nav-inner">
+      <a class="brand" href="#top"><img src="static/img/mave_icon.png" alt="" /><span>MAVE</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#method">Method</a>
+        <a href="#comparison">Comparison</a>
+        <a href="#blockouts">Blockouts</a>
+        <a href="#applications">Applications</a>
+        <a href="#results">Results</a>
+        <a href="#benchmark">Benchmark</a>
+        <a href="#citation">Citation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- 0 · promo video -->
+    <div class="hero">
+      <canvas class="hero-glow" id="hero-glow" width="96" height="48" aria-hidden="true"></canvas>
+      <div class="hero-frame">
+        <video id="hero-video" data-src-hd="static/video/promo/mave_promo_1080.mp4" data-src-sd="static/video/promo/mave_promo_720.mp4"
+               poster="static/img/promo_poster.jpg" muted playsinline preload="auto"></video>
+        <div class="hero-ctl">
+          <button id="hero-replay" type="button" hidden>↺ REPLAY</button>
+          <button id="hero-pp" type="button">❚❚ PAUSE</button>
+          <button id="hero-sound" type="button">♪ SOUND OFF</button>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#about">SCROLL ↓</a>
+    </div>
+
+    <!-- 1 · title -->
+    <section id="about">
+      <div class="wrap titleblock">
+        <img class="logo" src="static/img/mave_logo_dark.png" alt="MAVE" />
+        <h2>MAVE: Reconstructing Editable 3D Blockouts<br />from Film Shots</h2>
+        <p class="authors">
+          Yifan Chang<sup>1,2,5*</sup>, Jian Yang<sup>1,3*</sup>, Jiangnan Shao<sup>1,4*</sup>, Xiaofeng Wang<sup>6</sup>,<br />
+          Zhaoxin Fan<sup>7</sup>,
+          Renjing Xu<sup>4</sup>, Ming Lu<sup>8</sup>, Xingang Wang<sup>2</sup>, Zheng Zhu<sup>1</sup>
+        </p>
+        <p class="affils">
+          <sup>1</sup>GigaAI · <sup>2</sup>CASIA · <sup>3</sup>RUC · <sup>4</sup>HKUST (GZ) ·
+          <sup>5</sup>UCAS · <sup>6</sup>THU · <sup>7</sup>BUAA · <sup>8</sup>ZPark IPC
+        </p>
+        <p class="note">* Equal contribution</p>
+        <div class="btns">
+          <a class="btn primary" href="https://arxiv.org/abs/2611.22464"><span class="ic">▤</span> Paper</a>
+          <a class="btn" href="https://arxiv.org/abs/2611.22464"><span class="ic">✦</span> arXiv</a>
+          <a class="btn" href="https://github.com/yfChang-cv/MAVE"><span class="ic">⌥</span> Code</a>
+          <a class="btn" href="https://huggingface.co/datasets/yfChang/MAVE"><span class="ic">◆</span> MAVEBench &amp; MAVEData-3K</a>
+          <a class="btn warm" href="https://huggingface.co/datasets/yfChang/MAVE-film"><span class="ic">🔒</span> Film media (gated)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · abstract + method -->
+    <section id="method">
+      <div class="wrap">
+        <p class="kicker">01 · Method</p>
+        <h2>Observe metrically. Build agentically. Verify against evidence.</h2>
+        <p class="lead">
+          Animated 3D blockouts support previsualization and condition video generation, but rebuilding them from reference footage by hand is slow.
+          MAVE recovers cameras, human motion, and geometric evidence in one shared metric frame, has an agent construct an editable Blender scene under those constraints,
+          and checks every step against the evidence. The output is an editable scene plus a frame-aligned blockout video.
+        </p>
+        <div class="figure light"><img src="static/img/pipeline.jpg" alt="MAVE pipeline: Metric Observation, Agentic Modeling, Evidence-Based Verification" loading="lazy" /></div>
+        <div class="grid-3">
+          <article class="card"><div class="idx">M · STAGE 01</div><h3>Metric Observation</h3>
+            <p>Cameras, human motion, depth and object cues, recovered in one shared metric coordinate system.</p></article>
+          <article class="card v1"><div class="idx">A · STAGE 02</div><h3>Agentic Modeling</h3>
+            <p>An agent writes Blender code to place named, editable primitives — query, build, verify, edit.</p></article>
+          <article class="card"><div class="idx">VE · STAGE 03</div><h3>Evidence-Based Verification</h3>
+            <p>Programmatic checks flag depth conflicts, missing coverage, and human–environment inconsistencies.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · comparison -->
+    <section id="comparison">
+      <div class="wrap wrap-wide" data-tabs>
+        <p class="kicker">02 · Comparison</p>
+        <h2>Same agents. With and without MAVE.</h2>
+        <p class="lead">Each mosaic plays nine clips in sync. <b>Row 1</b>: input · Claude Opus 5.5 · Kimi K3.1 Pro.
+          <b>Row 2</b>: vanilla GPT-6.1 Sol · DeepSeek-1017 · Claude Sonnet 5.5. <b>Row 3</b>: the same three agents with MAVE.</p>
+        <div class="tabs" role="tablist">
+          <button class="tab on" role="tab" data-src="static/video/compare_method/mosaic/R238_compare3x3.mp4">R238<span class="sub">suburb walk</span></button>
+          <button class="tab" role="tab" data-src="static/video/compare_method/mosaic/F031_compare3x3.mp4">F031<span class="sub">forest fight</span></button>
+          <button class="tab" role="tab" data-src="static/video/compare_method/mosaic/F076_compare3x3.mp4">F076<span class="sub">samurai duel</span></button>
+        </div>
+        <div class="media-frame"><video muted loop playsinline preload="metadata" controls></video></div>
+        <div class="media-actions">
+          <button class="pill" data-act="restart" type="button">↺ Restart</button>
+          <button class="pill" data-act="toggle" type="button">❚❚ / ▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · blockout gallery -->
+    <section id="blockouts">
+      <div class="wrap wrap-wide">
+        <p class="kicker">03 · Reconstructions</p>
+        <h2>Film shot → editable blockout, frame-aligned.</h2>
+        <p class="lead">Left: the original shot. Right: MAVE's reconstructed blockout, rendered through the recovered camera.
+          Every actor and prop is a named, editable object in Blender.</p>
+        <div class="gal">
+          <figure><video data-lazy data-src="static/video/blockout/1.mp4" muted loop playsinline preload="none"></video><div class="lbls"><span>FILM</span><span class="r">BLOCKOUT</span></div></figure>
+          <figure><video data-lazy data-src="static/video/blockout/F076.mp4" muted loop playsinline preload="none"></video><div class="lbls"><span>FILM</span><span class="r">BLOCKOUT</span></div></figure>
+          <figure><video data-lazy data-src="static/video/blockout/F062.mp4" muted loop playsinline preload="none"></video><div class="lbls"><span>FILM</span><span class="r">BLOCKOUT</span></div></figure>
+          <figure><video data-lazy data-src="static/video/blockout/F028.mp4" muted loop playsinline preload="none"></video><div class="lbls"><span>FILM</span><span class="r">BLOCKOUT</span></div></figure>
+          <figure><video data-lazy data-src="static/video/blockout/F002.mp4" muted loop playsinline preload="none"></video><div class="lbls"><span>FILM</span><span class="r">BLOCKOUT</span></div></figure>
+          <figure><video data-lazy data-src="static/video/blockout/F031.mp4" muted loop playsinline preload="none"></video><div class="lbls"><span>FILM</span><span class="r">BLOCKOUT</span></div></figure>
+          <figure><video data-lazy data-src="static/video/blockout/03.mp4" muted loop playsinline preload="none"></video><div class="lbls"><span>FILM</span><span class="r">BLOCKOUT</span></div></figure>
+          <figure><video data-lazy data-src="static/video/blockout/10.mp4" muted loop playsinline preload="none"></video><div class="lbls"><span>FILM</span><span class="r">BLOCKOUT</span></div></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · applications -->
+    <section id="applications">
+      <div class="wrap wrap-wide" data-apps>
+        <p class="kicker">04 · Applications</p>
+        <h2>Edit the set. Reshoot the scene.</h2>
+        <p class="lead">Change a camera path or a character's trajectory in the blockout, render it, and use it to condition a video model.
+          Two examples per edit type. In each clip, left is the original shot and right is the regenerated one.</p>
+        <div class="tabs" role="tablist" data-app-cats>
+          <button class="tab on" role="tab" data-cat="camera" aria-selected="true">New camera</button>
+          <button class="tab" role="tab" data-cat="trajectory" aria-selected="false">New trajectory</button>
+          <button class="tab" role="tab" data-cat="person" aria-selected="false">Person exo → ego</button>
+          <button class="tab" role="tab" data-cat="robot" aria-selected="false">Robot exo → ego</button>
+        </div>
+        <div class="app-pair" data-app-cases="camera">
+            <figure class="app-case">
+              <div class="media-frame gal-like"><video data-src="static/video/application/camera.mp4" muted loop playsinline preload="none"></video>
+                <div class="lbls"><span>ORIGINAL</span><span class="r">GENERATED</span></div></div>
+              <figcaption><b>Orbit · dancers</b> — a full orbit around the couple, a camera move the film never shot.</figcaption>
+            </figure>
+            <figure class="app-case">
+              <div class="media-frame gal-like"><video data-src="static/video/application/camera_yard.mp4" muted loop playsinline preload="none"></video>
+                <div class="lbls"><span>ORIGINAL</span><span class="r">GENERATED</span></div></div>
+              <figcaption><b>Orbit · courtyard</b> — the camera circles the yard from above while the actor runs through it.</figcaption>
+            </figure>
+        </div>
+        <div class="app-pair" data-app-cases="trajectory" hidden>
+            <figure class="app-case">
+              <div class="media-frame gal-like"><video data-src="static/video/application/trajectory.mp4" muted loop playsinline preload="none"></video>
+                <div class="lbls"><span>ORIGINAL</span><span class="r">GENERATED</span></div></div>
+              <figcaption><b>Chase · beach</b> — the actors are re-blocked: red now chases blue across the sand.</figcaption>
+            </figure>
+            <figure class="app-case">
+              <div class="media-frame gal-like"><video data-src="static/video/application/trajectory_bench.mp4" muted loop playsinline preload="none"></video>
+                <div class="lbls"><span>ORIGINAL</span><span class="r">GENERATED</span></div></div>
+              <figcaption><b>Jump · bench</b> — the jump is redirected so the actor lands on the bench.</figcaption>
+            </figure>
+        </div>
+        <div class="app-pair" data-app-cases="person" hidden>
+            <figure class="app-case">
+              <div class="media-frame gal-like"><video data-src="static/video/application/person_ego.mp4" muted loop playsinline preload="none"></video>
+                <div class="lbls"><span>ORIGINAL</span><span class="r">GENERATED</span></div></div>
+              <figcaption><b>Desert</b> — third-person footage regenerated from the character’s own eyes.</figcaption>
+            </figure>
+            <figure class="app-case">
+              <div class="media-frame gal-like"><video data-src="static/video/application/person_ego_hands.mp4" muted loop playsinline preload="none"></video>
+                <div class="lbls"><span>ORIGINAL</span><span class="r">GENERATED</span></div></div>
+              <figcaption><b>Park bench</b> — the same bench scene, seen through his hands as he passes the magazine.</figcaption>
+            </figure>
+        </div>
+        <div class="app-pair" data-app-cases="robot" hidden>
+            <figure class="app-case">
+              <div class="media-frame gal-like"><video data-src="static/video/application/robot_ego.mp4" muted loop playsinline preload="none"></video>
+                <div class="lbls"><span>ORIGINAL</span><span class="r">GENERATED</span></div></div>
+              <figcaption><b>Living-room cleanup</b> — egocentric robot views for embodied-AI data.</figcaption>
+            </figure>
+            <figure class="app-case">
+              <div class="media-frame gal-like"><video data-src="static/video/application/robot_ego_fold.mp4" muted loop playsinline preload="none"></video>
+                <div class="lbls"><span>ORIGINAL</span><span class="r">GENERATED</span></div></div>
+              <figcaption><b>Folding clothes</b> — robot-hand POV of the same task, generated from an edited blockout.</figcaption>
+            </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · results -->
+    <section id="results">
+      <div class="wrap">
+        <p class="kicker">05 · Results on MAVEBench</p>
+        <h2>Higher scores, in less time.</h2>
+        <div class="stats" style="margin-top:26px">
+          <div class="stat"><div class="v gold">+41.1</div><div class="l">max total-score gain over vanilla (+27.5 to +41.1 across agents)</div></div>
+          <div class="stat"><div class="v">73.2</div><div class="l">total with DeepSeek-1017</div></div>
+          <div class="stat"><div class="v">$0.054</div><div class="l">average API cost per shot</div></div>
+          <div class="stat"><div class="v">−53%</div><div class="l">total reconstruction time</div></div>
+        </div>
+        <div class="charts">
+          <div class="chart">
+            <h3>Total score, vanilla → MAVE</h3>
+            <div class="sub">MAVEBench total (0–100), per agent</div>
+            <div id="chart-total"></div>
+            <div class="legend"><span><i class="dot" style="background:#857BDB;border-radius:50%"></i>Vanilla</span><span><i class="dot" style="background:#C4831C;border-radius:50%"></i>MAVE</span></div>
+          </div>
+          <div class="chart">
+            <h3>Where the gain comes from</h3>
+            <div class="sub">Per-axis score, GPT-6.1 Sol</div>
+            <div id="chart-axes"></div>
+            <div class="legend"><span><i class="dot" style="background:#857BDB"></i>Vanilla</span><span><i class="dot" style="background:#C4831C"></i>MAVE</span></div>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Method</th><th>ORE ↓</th><th>RRA@15 ↑</th><th>RTA@15 ↑</th><th>Cam. ↑</th><th>OrdAcc ↑</th><th>HOTA ↑</th><th>MaskIoU ↑</th><th>Char. ↑</th><th>Total ↑</th></tr></thead>
+            <tbody id="board-body"></tbody>
+          </table>
+        </div>
+        <p class="caption"><span style="color:#E6A93A">●</span> best · <span style="text-decoration:underline;text-decoration-color:#857BDB;text-underline-offset:3px">underline</span> second best, among reconstruction methods. All MAVE runs share cameras from Metric Observation.</p>
+
+        <h3 class="subhead">Efficiency</h3>
+        <p class="lead" style="margin-top:6px">MAVE reaches a far higher score with 2.4–3.2× fewer primitives, and cuts agent time by 42–55% for GPT-6.1 Sol and DeepSeek-1017. With DeepSeek-1017 it is also the cheapest run of all eight, at $0.054 per shot.</p>
+        <div class="charts">
+          <div class="chart">
+            <h3>Score vs. API cost per shot</h3>
+            <div class="sub">each arrow: the same agent, vanilla → MAVE</div>
+            <div id="chart-cost"></div>
+            <div class="legend"><span><i class="dot" style="background:#857BDB;border-radius:50%"></i>Vanilla</span><span><i class="dot" style="background:#C4831C;border-radius:50%"></i>MAVE</span></div>
+          </div>
+          <div class="chart">
+            <h3>Agent time per shot</h3>
+            <div class="sub">minutes · MAVE adds 1m28s of Metric Observation (shown hatched)</div>
+            <div id="chart-time"></div>
+            <div class="legend"><span><i class="dot" style="background:#857BDB"></i>Vanilla</span><span><i class="dot" style="background:#C4831C"></i>MAVE agent</span><span><i class="dot hatch"></i>Metric Observation</span></div>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="narrow">
+            <thead><tr><th>Method</th><th>Agent time ↓</th><th># Primitives</th><th>Cost ↓</th><th>Total ↑</th></tr></thead>
+            <tbody id="eff-body"></tbody>
+          </table>
+        </div>
+        <p class="caption">Agent time excludes Metric Observation (1m28s per shot, shared by all MAVE runs).</p>
+      </div>
+    </section>
+
+    <!-- 7 · benchmark -->
+    <section id="benchmark">
+      <div class="wrap wrap-wide">
+        <p class="kicker">06 · MAVEBench</p>
+        <h2>50 film shots, annotated for camera, layout and blocking.</h2>
+        <p class="lead">Every keyframe carries human masks, static-object boxes, and metric depth — the evidence a blockout is scored against.
+          Plus <b>MAVEData-3K</b>: 3,000 blockout–video pairs for training blockout-conditioned generators.</p>
+        <div class="stats" style="margin-top:22px">
+          <div class="stat"><div class="v">50</div><div class="l">film shots from 50 films</div></div>
+          <div class="stat"><div class="v">416</div><div class="l">annotated keyframes</div></div>
+          <div class="stat"><div class="v">159</div><div class="l">tracked people</div></div>
+          <div class="stat"><div class="v">3,000</div><div class="l">pairs in MAVEData-3K</div></div>
+        </div>
+        <div class="flow"><span>SOURCE FRAME</span><span class="ar">→</span><span>PEOPLE MASKS + OBJECT BOXES</span><span class="ar">→</span><span>METRIC DEPTH</span></div>
+        <div class="bench-row"><div class="rowhead"><b>F002</b> · hillside fight · 3 people</div>
+          <div class="triptych"><figure><img src="static/img/bench/F002_source.jpg" alt="F002 source frame" loading="lazy" /></figure><figure><img src="static/img/bench/F002_annot.jpg" alt="F002 annotations" loading="lazy" /></figure><figure><img src="static/img/bench/F002_depth.jpg" alt="F002 depth" loading="lazy" /></figure></div></div>
+        <div class="bench-row"><div class="rowhead"><b>R238</b> · suburban street · 3 people · props</div>
+          <div class="triptych"><figure><img src="static/img/bench/R238_source.jpg" alt="R238 source frame" loading="lazy" /></figure><figure><img src="static/img/bench/R238_annot.jpg" alt="R238 annotations" loading="lazy" /></figure><figure><img src="static/img/bench/R238_depth.jpg" alt="R238 depth" loading="lazy" /></figure></div></div>
+        <div class="bench-row"><div class="rowhead"><b>F076</b> · samurai duel · 5 people</div>
+          <div class="triptych"><figure><img src="static/img/bench/F076_source.jpg" alt="F076 source frame" loading="lazy" /></figure><figure><img src="static/img/bench/F076_annot.jpg" alt="F076 annotations" loading="lazy" /></figure><figure><img src="static/img/bench/F076_depth.jpg" alt="F076 depth" loading="lazy" /></figure></div></div>
+        <p class="caption">Full film media is available through gated access for research use.</p>
+        <ul class="list">
+          <li><strong>Camera</strong> — ORE, RRA@15, RTA@15</li>
+          <li><strong>Layout</strong> — ordinal depth accuracy over static objects</li>
+          <li><strong>Characters</strong> — HOTA and mask IoU over tracked people</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 8 · citation -->
+    <section id="citation">
+      <div class="wrap">
+        <p class="kicker">07 · Citation</p>
+        <h2>Cite MAVE</h2>
+        <div class="bib">
+          <button type="button" id="copy-bib">Copy</button>
+          <pre id="bibtex">@misc{chang2026mavereconstructingeditable3d,
+      title={MAVE: Reconstructing Editable 3D Blockouts from Film Shots}, 
+      author={Yifan Chang and Jian Yang and Jiangnan Shao and Xiaofeng Wang and Zhaoxin Fan and Renjing Xu and Ming Lu and Xingang Wang and Zheng Zhu},
+      year={2026},
+      eprint={2611.22464},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2611.22464}, 
+}</pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>Film clips © their respective owners, shown for non-commercial research only; removed on request via a
+        <a href="https://github.com/yfChang-cv/MAVE/issues">GitHub issue</a>.</p>
+      <p>© 2026 MAVE authors · <a href="https://github.com/yfChang-cv/MAVE">Source</a></p>
+    </div>
+  </footer>
+
+  <script id="results-data" type="application/json">
+{"recon":[{"agent":"GPT-6.1 Sol","vanilla":48.6,"mave":76.1},{"agent":"DeepSeek-1017","vanilla":37.2,"mave":73.2},{"agent":"Claude Sonnet 5.5","vanilla":31.6,"mave":72.7}],
+ "axes":[{"axis":"Camera","vanilla":0.477,"mave":0.938},{"axis":"Layout","vanilla":0.609,"mave":0.781},{"axis":"Character","vanilla":0.373,"mave":0.563}],
+ "efficiency":[
+  {"method":"GPT-6.1 Sol","group":"vanilla","time":"22m41s","prims":273.1,"cost":0.385,"total":48.6},
+  {"method":"Claude Opus 5.5","group":"vanilla","time":"15m50s","prims":36.4,"cost":0.644,"total":41.6},
+  {"method":"DeepSeek-1017","group":"vanilla","time":"20m25s","prims":182.3,"cost":0.074,"total":37.2},
+  {"method":"Claude Sonnet 5.5","group":"vanilla","time":"3m46s","prims":67.7,"cost":0.341,"total":31.6},
+  {"method":"Kimi K3.1 Pro","group":"vanilla","time":"24m53s","prims":271.2,"cost":0.368,"total":28.3},
+  {"method":"GPT-6.1 Sol","group":"mave","time":"13m11s","prims":115.5,"cost":0.445,"total":76.1},
+  {"method":"DeepSeek-1017","group":"mave","time":"9m17s","prims":68.3,"cost":0.054,"total":73.2},
+  {"method":"Claude Sonnet 5.5","group":"mave","time":"4m36s","prims":20.9,"cost":0.363,"total":72.7}],
+ "obs_time":"1m28s",
+ "leaderboard":[
+  {"method":"No Reconstruction","group":"none","ore":0.168,"rra":0.000,"rta":0.000,"cam":0.000,"ord":0.000,"hota":0.000,"iou":0.000,"char":0.000,"total":0.0},
+  {"method":"GPT-6.1 Sol","group":"vanilla","ore":0.060,"rra":0.571,"rta":0.215,"cam":0.477,"ord":0.609,"hota":0.421,"iou":0.324,"char":0.373,"total":48.6},
+  {"method":"Claude Opus 5.5","group":"vanilla","ore":0.077,"rra":0.542,"rta":0.247,"cam":0.444,"ord":0.585,"hota":0.264,"iou":0.175,"char":0.220,"total":41.6},
+  {"method":"DeepSeek-1017","group":"vanilla","ore":0.123,"rra":0.430,"rta":0.184,"cam":0.293,"ord":0.596,"hota":0.260,"iou":0.191,"char":0.226,"total":37.2},
+  {"method":"Claude Sonnet 5.5","group":"vanilla","ore":0.135,"rra":0.346,"rta":0.209,"cam":0.250,"ord":0.534,"hota":0.195,"iou":0.131,"char":0.163,"total":31.6},
+  {"method":"Kimi K3.1 Pro","group":"vanilla","ore":0.156,"rra":0.208,"rta":0.185,"cam":0.155,"ord":0.511,"hota":0.215,"iou":0.152,"char":0.183,"total":28.3},
+  {"method":"GPT-6.1 Sol","group":"mave","ore":0.005,"rra":1.000,"rta":0.844,"cam":0.938,"ord":0.781,"hota":0.627,"iou":0.499,"char":0.563,"total":76.1},
+  {"method":"DeepSeek-1017","group":"mave","ore":0.005,"rra":1.000,"rta":0.844,"cam":0.938,"ord":0.717,"hota":0.604,"iou":0.478,"char":0.541,"total":73.2},
+  {"method":"Claude Sonnet 5.5","group":"mave","ore":0.005,"rra":1.000,"rta":0.844,"cam":0.938,"ord":0.695,"hota":0.612,"iou":0.485,"char":0.548,"total":72.7}]}
+  </script>
+  <script src="static/js/main.js"></script>
+</body>
+</html>

@@ -20,6 +20,9 @@ checkpoints/
 .venv/
 data/
 
+# promo production workspace (not part of the public docs site)
+docs/promo/
+
 # benchmark / dataset data trees → Hugging Face only (not GitHub)
 # keep benchmark/README.md and .gitkeep tracked
 benchmark/mavebench/
