@@ -10,7 +10,7 @@ HF gating is **repo-wide**. To keep annotations publicly downloadable while rest
 | `yfChang/MAVE-film` | **Gated** (manual approve) | Film source media only | https://huggingface.co/datasets/yfChang/MAVE-film |
 | Collection `MAVE` | — | Groups the two repos as one release | https://huggingface.co/collections/yfChang/mave-6afc28d150cd379e072c4d9e |
 
-Scaffold created on 2026-11-17. Data files will be uploaded when ready.
+Scaffold created on 2026-11-17. **MAVEBench-first** staging cards/legal live in [`docs/hf/`](./hf/). MAVEData-3K is deferred.
 
 ## Why two repos
 

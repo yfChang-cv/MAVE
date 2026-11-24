@@ -1,0 +1,33 @@
+MAVE-film — NOTICE
+==================
+
+Dataset: https://huggingface.co/datasets/yfChang/MAVE-film
+Annotations (public): https://huggingface.co/datasets/yfChang/MAVE
+Code: https://github.com/yfChang-cv/MAVE
+Paper: https://arxiv.org/abs/2611.22464
+
+1. This repository distributes **film source media** solely to support
+   non-commercial research related to MAVE / MAVEBench.
+
+2. **Copyright** in the film clips remains with the original rights holders.
+   The MAVE authors do **not** claim ownership of, or relicense, the film
+   content.
+
+3. Approved users must:
+   - use the media for non-commercial research only;
+   - not redistribute the film files;
+   - not use the media to identify or profile individuals;
+   - respect applicable copyright and privacy laws.
+
+4. Access is granted at the maintainers' discretion and may be revoked.
+
+5. Our annotations are public and do not require access to this repository:
+   https://huggingface.co/datasets/yfChang/MAVE
+
+6. Takedown. If you are a rights holder (or authorized representative) and
+   believe material here infringes your copyright, please contact us via a
+   discussion on this dataset page, a GitHub issue at
+   https://github.com/yfChang-cv/MAVE/issues, or the authors listed in the
+   MAVE paper (https://arxiv.org/abs/2611.22464). Include the shot id / file
+   path and evidence of ownership or authorization. We will review the
+   request and remove the relevant files when appropriate.

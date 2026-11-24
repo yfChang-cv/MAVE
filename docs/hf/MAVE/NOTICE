@@ -1,0 +1,19 @@
+MAVE — NOTICE
+=============
+
+Dataset: https://huggingface.co/datasets/yfChang/MAVE
+Code:    https://github.com/yfChang-cv/MAVE
+Paper:   https://arxiv.org/abs/2611.22464
+
+1. This repository contains **our annotations and indices** for MAVEBench.
+   It does **not** contain film source media.
+
+2. Film shots remain copyrighted by their original rights holders. Film media
+   is distributed only via the gated sibling dataset:
+   https://huggingface.co/datasets/yfChang/MAVE-film
+
+3. We do not relicense film content. Access to film media, when granted, is
+   for approved non-commercial research use under the terms stated on that
+   gated repository.
+
+4. Please cite the MAVE paper when using these annotations.

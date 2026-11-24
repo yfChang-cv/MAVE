@@ -24,6 +24,7 @@ from Film Shots
 
 ## 🔥 News
 
+- **[2026.11]** **MAVEBench** is released: annotations ([`yfChang/MAVE`](https://huggingface.co/datasets/yfChang/MAVE)) and gated film media ([`yfChang/MAVE-film`](https://huggingface.co/datasets/yfChang/MAVE-film)).
 - **[2026.11]** Paper is available on [arXiv](https://arxiv.org/abs/2611.22464).
 - **[2026.11]** Repository is online. Code, MAVEBench, and MAVEData-3K will be released soon.
 
@@ -31,10 +32,9 @@ from Film Shots
 
 - ✅ ~~Paper ([arXiv](https://arxiv.org/abs/2611.22464))~~
 - ✅ ~~Project page ([GitHub Pages](https://yfChang-cv.github.io/MAVE/))~~
-- [ ] Code of MAVE (**public**)
-- [ ] Our annotations (**public**)
-- [ ] MAVEBench evaluation & film media (**Hugging Face gated**, upon request)
-- [ ] MAVEData-3K film media (**Hugging Face gated**, upon request)
+- [ ] Code of MAVE (**public**, coming soon)
+- ✅ ~~MAVEBench (**public** annotations [`yfChang/MAVE`](https://huggingface.co/datasets/yfChang/MAVE) · gated film [`yfChang/MAVE-film`](https://huggingface.co/datasets/yfChang/MAVE-film) · eval [`code/eval/`](./code/eval))~~
+- [ ] MAVEData-3K (**coming soon**)
 
 ## 🔓 Access Policy
 
@@ -42,11 +42,11 @@ from Film Shots
 | --- | --- |
 | **Code** | Public (this repository) |
 | **Our annotations** | Public: [`yfChang/MAVE`](https://huggingface.co/datasets/yfChang/MAVE) |
-| **Film source media** (MAVEBench / MAVEData-3K) | Gated: [`yfChang/MAVE-film`](https://huggingface.co/datasets/yfChang/MAVE-film) — request access |
+| **Film source media** (MAVEBench) | Gated: [`yfChang/MAVE-film`](https://huggingface.co/datasets/yfChang/MAVE-film) — request access |
 
 HF gating is repo-wide, so we publish **two datasets in one Collection**: [MAVE](https://huggingface.co/collections/yfChang/mave-6afc28d150cd379e072c4d9e). Annotations stay publicly downloadable; film media requires manual approval. Details: [`docs/huggingface_release.md`](./docs/huggingface_release.md).
 
-Film shots remain copyrighted by their original rights holders. We release our own annotations publicly; film media is distributed only after gated access is approved for research use. Data files will be uploaded when ready.
+Film shots remain copyrighted by their original rights holders. We release our own annotations publicly; film media is distributed only after gated access is approved for research use. **MAVEBench** annotations and film clips are available now; MAVEData-3K will follow later.
 
 ## 📖 Abstract
 
@@ -56,7 +56,7 @@ Animated 3D blockouts support previsualization and provide structural conditions
 
 | Component | Description | Access |
 | --- | --- | --- |
-| [`code/`](./code) | MAVE pipeline: Metric Observation → Agentic Modeling → Evidence-Based Verification | Public (coming soon) |
+| [`code/`](./code) | [`pipeline/`](./code/pipeline) inference + [`eval/`](./code/eval) | Public — see [`code/README.md`](./code/README.md) |
 | [`benchmark/`](./benchmark) | **MAVEBench** annotations & evaluation; film media via HF gated | Annotations public · media gated |
 | [`dataset/`](./dataset) | **MAVEData-3K** pairs; film media via HF gated | Annotations public · media gated |
 | [`assets/`](./assets) | Figures and demo materials | Public |
@@ -75,7 +75,7 @@ MAVE reconstructs editable blockouts in three stages:
 2. **Agentic Modeling** — construct named, editable scene primitives under observation constraints  
 3. **Evidence-Based Verification** — report depth conflicts, missing coverage, and human–environment inconsistencies for refinement  
 
-Detailed installation and inference instructions will be added with the code release.
+Installation and inference: [`code/pipeline/README.md`](./code/pipeline/README.md).
 
 ## 🎬 Qualitative Comparison
 
@@ -148,7 +148,7 @@ MAVEBench evaluates video-to-blockout reconstruction on **50 film shots** along 
 
 </div>
 
-**Access.** Our annotations and evaluation scripts will be public ([`benchmark/`](./benchmark) + [`yfChang/MAVE`](https://huggingface.co/datasets/yfChang/MAVE)). Film source media: request access at [`yfChang/MAVE-film`](https://huggingface.co/datasets/yfChang/MAVE-film).
+**Access.** Annotations: [`yfChang/MAVE`](https://huggingface.co/datasets/yfChang/MAVE) (also staged under [`benchmark/`](./benchmark)). Evaluation: [`code/eval/`](./code/eval). Film source media: request access at [`yfChang/MAVE-film`](https://huggingface.co/datasets/yfChang/MAVE-film).
 
 ## 📦 MAVEData-3K (Coming Soon)
 
@@ -161,8 +161,8 @@ MAVEData-3K contains **3,000** blockout–video pairs. Each reconstructed scene 
 ```text
 MAVE/
 ├── assets/        # teaser & demo materials
-├── code/          # MAVE implementation (coming soon)
-├── benchmark/     # MAVEBench data & evaluation (coming soon)
+├── code/          # MAVE implementation (coming soon) + eval
+├── benchmark/     # MAVEBench staging (annotations released on HF)
 ├── dataset/       # MAVEData-3K release (coming soon)
 └── README.md
 ```
@@ -190,5 +190,5 @@ For questions about MAVE, MAVEBench, or MAVEData-3K, please open an [issue](http
 ## 📄 License
 
 - **Code** — will be released under an open-source license (to be announced).  
-- **Our annotations** — public for research use (license to be announced).  
+- **Our annotations** — [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).  
 - **Film source media** — copyright remains with the original rights holders; distributed only via Hugging Face gated access for approved research use.
